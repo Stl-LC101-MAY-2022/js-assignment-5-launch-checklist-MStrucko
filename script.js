@@ -19,6 +19,7 @@ window.addEventListener("load", function() {
             list.style.visibility = "hidden"; 
             alert("All fields are required!");
             event.preventDefault();
+
         } 
         if (validateInput(pilot.value) == "Is a Number" || validateInput(copilot.value) == "Is a Number") {
             list.style.visibility = "hidden"; 
@@ -35,7 +36,6 @@ window.addEventListener("load", function() {
     }) 
     
     let listedPlanets;
-   
     let listedPlanetsResponse = myFetch();
     listedPlanetsResponse.then(function (result) {
         listedPlanets = result;

@@ -19,7 +19,6 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
    `
 }
 
-
 function validateInput(testInput) {
     if (testInput === "") {
         return "Empty";
@@ -30,15 +29,12 @@ function validateInput(testInput) {
     }
 }
 
-
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let pilotStatus = document.getElementById("pilotStatus");
     let copilotStatus = document.getElementById("copilotStatus");
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus"); 
     let h2 = document.getElementById("launchStatus");
-
-
 
     if (cargoLevel > 10000 && fuelLevel < 10000) {
         list.style.visibility= "visible";
@@ -48,7 +44,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
         fuelStatus.innerHTML = "Fuel level too low for launch";
         cargoStatus.innerHTML = "Cargo mass too heavy for launch";
-    
     } 
     else if (fuelLevel < 10000 && cargoLevel <= 10000) {
         list.style.visibility = "visible";
@@ -58,7 +53,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
         cargoStatus.innerHTML = "Cargo mass low enough for launch";
-
     } 
     else if (cargoLevel > 10000 && fuelLevel >= 10000) {
         list.style.visibility = "visible";
@@ -67,8 +61,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
         fuelStatus.innerHTML = "Fuel level high enough for launch";
-        cargoStatus.innerHTML = "Cargo mass too heavy for launch";
-        
+        cargoStatus.innerHTML = "Cargo mass too heavy for launch"; 
     } 
     else if (cargoLevel <= 10000 && fuelLevel >= 10000) {
         list.style.visibility = "visible";
@@ -81,14 +74,12 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     } 
 }
 
-
 async function myFetch() {
     let planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json');
     const data = await planetsReturned.json();
     console.log(data);
     return data;
 }
-
 
 function pickPlanet(planets) {
     let randomIndex = Math.floor(Math.random() * planets.length);
