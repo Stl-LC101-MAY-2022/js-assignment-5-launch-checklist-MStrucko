@@ -81,7 +81,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     } 
 }
 
-// Fetches the data from the planet json
+
 async function myFetch() {
     let planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json');
     const data = await planetsReturned.json();
@@ -89,7 +89,7 @@ async function myFetch() {
     return data;
 }
 
-// Returns one planet with a randomly selected index
+
 function pickPlanet(planets) {
     let randomIndex = Math.floor(Math.random() * planets.length);
     let currentPlanet = planets[randomIndex];
