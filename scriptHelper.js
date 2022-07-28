@@ -1,10 +1,10 @@
-// Write your helper functions here!
+
 
 require('isomorphic-fetch');
 
-// Updates the missionTarget div - does not need to return anything
+
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
-   // Here is the HTML formatting for our missionTarget div.
+ 
    missiontarget = document.getElementById("missionTarget");
    missiontarget.innerHTML = `
     <h2>MissionDestination</h2>
