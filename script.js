@@ -9,7 +9,6 @@ window.addEventListener("load", function() {
 
     list.style.visibility = "hidden";   
 
-     
     let form = document.querySelector("form"); /* Form */
     form.addEventListener("submit", function(event) { 
         
