@@ -38,7 +38,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
     if (cargoLevel > 10000 && fuelLevel < 10000) {
         list.style.visibility= "visible";
-        h2.style.color = "rgb(199, 37, 78)"; /*RED*/
+        h2.style.color = "rgb(199, 37, 78)"; 
         h2.innerHTML = "Shuttle Not Ready for Launch";       
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
@@ -47,7 +47,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     } 
     else if (fuelLevel < 10000 && cargoLevel <= 10000) {
         list.style.visibility = "visible";
-        h2.style.color = "rgb(199, 37, 78)"; /*RED*/
+        h2.style.color = "rgb(199, 37, 78)"; 
         h2.innerHTML = "Shuttle Not Ready for Launch";
         fuelStatus.innerHTML = "Fuel level too low for launch";
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
@@ -56,7 +56,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     } 
     else if (cargoLevel > 10000 && fuelLevel >= 10000) {
         list.style.visibility = "visible";
-        h2.style.color = "rgb(199, 37, 78)"; /*RED*/
+        h2.style.color = "rgb(199, 37, 78)"; 
         h2.innerHTML = "Shuttle Not Ready for Launch";
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
@@ -65,7 +65,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     } 
     else if (cargoLevel <= 10000 && fuelLevel >= 10000) {
         list.style.visibility = "visible";
-        h2.style.color = "rgb(65, 159, 106)"; /*GREEN*/
+        h2.style.color = "rgb(65, 159, 106)"; 
         h2.innerHTML = "Shuttle is Ready for Launch";
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
